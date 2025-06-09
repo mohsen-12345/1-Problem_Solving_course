@@ -1,0 +1,26 @@
+void read(float &R){
+	
+	cout << "please enter R: ";
+	cin >> R;
+	
+}
+
+float circleArea(float R){
+	
+	return 3.14 * pow(R, 2);
+	
+}
+
+void printResult(float area){
+	
+	cout << "Circle Area = " << area;
+	
+}
+
+int main(int argc, char** argv){
+	
+	float R;
+	read(R);
+	printResult(circleArea(R));
+			
+}

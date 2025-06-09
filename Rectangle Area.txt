@@ -1,0 +1,28 @@
+void read(float &A, float &B){
+	
+	cout << "please enter A: ";
+	cin >> A;
+	cout << "please enter B: ";
+	cin >> B;
+	
+}
+
+float calculateRectangleArea(float A, float B){
+	
+	return A * B;
+	
+}
+
+void printResult(float area){
+	
+	cout << "Rectangle area = " << area;
+	
+}
+
+int main(int argc, char** argv){
+	
+	float A, B;
+	read(A, B);
+	printResult(calculateRectangleArea(A, B));
+			
+}

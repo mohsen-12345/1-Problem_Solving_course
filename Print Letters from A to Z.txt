@@ -1,0 +1,15 @@
+void printLettersAtoZ(){
+	
+	for(char i = 'A'; i <= 'Z'; i++){
+		
+		cout << i << endl;
+		
+	}
+	
+}
+
+int main(int argc, char** argv){
+	
+	printLettersAtoZ();
+	
+}

@@ -1,0 +1,26 @@
+void read(float &I){
+	
+	cout << "please enter I: ";
+	cin >> I;
+	
+}
+
+float circleAreaAlongCircumference(float I){
+	
+	return pow(I, 2) / (4 * 3.14);
+	
+}
+
+void printResult(float area){
+	
+	cout << "Circle Area Along the Circumference = " << area;
+	
+}
+
+int main(int argc, char** argv){
+	
+	float I;
+	read(I);
+	printResult(circleAreaAlongCircumference(I));
+			
+}

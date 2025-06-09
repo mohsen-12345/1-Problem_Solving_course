@@ -1,0 +1,41 @@
+int readTotalSales(){
+	
+	int totalSales;
+	
+	cout << "please enter your total sales: ";
+	cin >> totalSales;
+	
+	return totalSales;
+	
+}
+
+float getComissionPercentage(float totalSales){
+	
+	if(totalSales >= 1000000)
+		return 0.01;
+	else if(totalSales >= 500000)
+		return 0.02;
+	else if(totalSales >= 100000)
+		return 0.03;
+	else if(totalSales >= 50000)
+		return 0.04;
+	else
+		return 0.05;
+	
+}
+
+float calculateTotalComission(float totalSales){
+	
+	return getComissionPercentage(totalSales) * totalSales;
+	
+}
+
+int main(int argc, char** argv){
+	
+	float totalSales = readTotalSales();
+	
+	cout << "Comission Percentage = " << getComissionPercentage(totalSales) << endl;
+	
+	cout << "Total Comission = " << calculateTotalComission(totalSales) << endl;
+			
+}

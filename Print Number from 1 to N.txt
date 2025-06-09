@@ -1,0 +1,32 @@
+int readNumber(){
+	
+	int number;
+	
+	cout << "Please enter a number: ";
+	cin >> number;
+	
+	return number;
+}
+
+int range(int number){
+	
+	for(int i = 1; i < number; i++){
+		
+		cout << i << endl;
+		
+	}
+	
+}
+
+void printNumbers(int number){
+	
+	cout << range(number);
+	
+}
+
+
+int main(int argc, char** argv){
+	
+	printNumbers(readNumber());
+			
+}

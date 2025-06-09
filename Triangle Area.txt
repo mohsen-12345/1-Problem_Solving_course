@@ -1,0 +1,28 @@
+void read(float &A, float &H){
+	
+	cout << "please enter A: ";
+	cin >> A;
+	cout << "please enter H: ";
+	cin >> H;
+	
+}
+
+float triangleArea(float A, float H){
+	
+	return (A/2) * H;
+	
+}
+
+void printResult(float area){
+	
+	cout << "Triangle Area = " << area;
+	
+}
+
+int main(int argc, char** argv){
+	
+	float A, H;
+	read(A, H);
+	printResult(triangleArea(A, H));
+			
+}

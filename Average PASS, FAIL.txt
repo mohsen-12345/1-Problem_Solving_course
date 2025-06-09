@@ -1,0 +1,140 @@
+int readNumber1(){
+	int num1;
+	
+	cout << "enter number1: ";
+	cin >> num1;
+	
+	return num1;
+	
+}
+
+int readNumber2(){
+	int num2;
+	
+	cout << "enter number2: ";
+	cin >> num2;
+	
+	return num2;
+	
+}
+
+int readNumber3(){
+	int num3;
+	
+	cout << "enter number3: ";
+	cin >> num3;
+	
+	return num3;
+	
+}
+
+int getSum(int num1, int num2, int num3){
+	
+	int sum = num1 + num2 + num3;
+	return sum;
+	
+}
+
+float getAverage(int sum){
+	
+	float average = sum / 3;
+	return average;
+	
+}
+
+bool markPassFail(float average){
+
+	return (average >= 50);	
+	
+}
+
+void printPassFail(float average){
+	
+	cout << "your average = " << average << endl;
+	
+	if (markPassFail(average) == true) {
+		
+		cout << "PASS";
+		
+	}
+	else{
+		
+		cout << "FAIL";
+		
+	}
+	
+}
+
+int main(int argc, char** argv){
+	
+	printPassFail(getAverage(getSum(readNumber1(),readNumber2(),readNumber3())));
+
+}
+---------------------------------------
+Another Solution:
+enum enPassFail{pass = 1, fail = 0};
+
+void readNumbers(int &num1, int &num2, int &num3){
+	
+	cout << "please read number one: ";
+	cin >> num1;
+	cout << "please read number two: ";
+	cin >> num2;
+	cout << "please read number three: ";
+	cin >> num3;
+	
+}
+
+int sum3Numbers(int num1, int num2, int num3){
+	
+	int total = num1 + num2 + num3;
+	return total;
+	
+}
+
+float average3Numbers(int num1, int num2, int num3){
+	
+	return (float)sum3Numbers(num1, num2, num3) / 3;
+	
+}
+
+enPassFail checkAverage(float average){
+	
+	if(average >= 50){
+		
+		return enPassFail::pass;
+		
+	}		
+	else(average <= 50);{
+		
+		return enPassFail::fail;
+		
+	}
+	
+}
+
+void printResult(float average){
+	
+	cout << "the avrage = " << average << endl;
+	
+	if(checkAverage(average) == enPassFail::pass){
+		
+		cout << "PASS";
+		
+	}
+	else{
+		
+		cout << "FAIL";
+		
+	}
+	
+}
+
+int main(int argc, char** argv){
+	
+	int num1, num2, num3;
+	
+	readNumbers(num1, num2, num3);
+	printResult(average3Numbers(num1, num2, num3));
+	
+}

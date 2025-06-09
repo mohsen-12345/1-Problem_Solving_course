@@ -1,0 +1,47 @@
+int readNumber(){
+	
+	int number;
+	
+	cout << "Please enter a Number: ";
+	cin >> number;
+	
+	return number;
+	
+}
+
+int readPower(){
+	
+	int power;
+	
+	cout << "Please enter the Power: ";
+	cin >> power;
+	
+	return power;
+	
+}
+
+int powerOfM(int number, int power){
+	
+	if(power == 1){
+		
+		return 1;
+		
+	}
+	
+	int result = 1;
+	
+	for(int i = 1; i <= power; i++){
+		
+		result = result * number;
+		
+	}
+	
+	return result;
+	
+}
+
+int main(int argc, char** argv){
+	
+	cout << powerOfM(readNumber(),readPower());
+			
+}

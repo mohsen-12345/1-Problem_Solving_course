@@ -1,0 +1,54 @@
+struct strTaskDuration{
+	
+	int numberOfDays, numberOfHours, numberOfMinutes, numberOfSeconds;
+	
+};
+
+float readPositiveNumber(string message){
+	
+	cout << message << endl;
+	
+	int number;
+	cin >> number;
+	
+	while(number < 0){
+		
+		cout << message << endl;
+		cin >> number;
+		
+	}
+	
+	return number;
+	
+}
+
+strTaskDuration readTaskDuration(){
+	
+	strTaskDuration taskDuration;
+	
+	taskDuration.numberOfDays = readPositiveNumber("please enter number of days: ");
+	taskDuration.numberOfHours = readPositiveNumber("please enter number of hours: ");
+	taskDuration.numberOfMinutes = readPositiveNumber("please enter number of minutes: ");
+	taskDuration.numberOfSeconds = readPositiveNumber("please enter number of seconds: ");
+	
+	return taskDuration;
+	
+}
+
+int taskDurationInSeconds(strTaskDuration taskDuration){
+	
+	int durationInSeconds = 0;
+	
+	durationInSeconds += taskDuration.numberOfDays * 24 * 60 * 60;
+	durationInSeconds += taskDuration.numberOfHours * 60 * 60;
+	durationInSeconds += taskDuration.numberOfMinutes * 60;
+	durationInSeconds += taskDuration.numberOfSeconds;
+	
+	return durationInSeconds;
+}
+
+int main(int argc, char** argv){
+	
+	cout << "task duration in seconds: " << taskDurationInSeconds(readTaskDuration());
+	
+}

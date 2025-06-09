@@ -1,0 +1,43 @@
+void readNumbers(int &num1, int &num2, int &num3){
+	
+	cout << "please read number one: ";
+	cin >> num1;
+	cout << "please read number two: ";
+	cin >> num2;
+	cout << "please read number three: ";
+	cin >> num3;
+	
+}
+
+int MaxOf2Numbers(int num1, int num2, int num3){
+	
+	if(num1 > num2 && num1 > num2){
+		
+		return num1;
+		
+	}
+	else if(num2 > num2 && num2 > num3){
+		
+		return num2;
+		
+	}
+	else{
+		
+		return num3;
+		
+	}
+	
+}
+void printResult(int max){
+	
+	cout << "the max number = " << max;
+	
+}
+
+int main(int argc, char** argv){
+	
+	int num1, num2, num3;
+	
+	readNumbers(num1, num2, num3);
+	printResult(MaxOf2Numbers(num1, num2, num3));	
+}

@@ -1,0 +1,53 @@
+enum enPrimeNotPrime{prime = 1, notPrime = 2};
+
+float readPositiveNumber(string message){
+	
+	int number;
+	cout << "enter a positive number: ";
+	cin >> number;
+	
+	while(number < 0){
+		
+		cout << message << endl;
+		cin >> number;
+		
+	}
+	
+	return number;
+	
+}
+
+enPrimeNotPrime checkPrime(int number){
+	
+	int M = round(number/2);
+	
+	for(int counter = 2; counter <= M; counter++){
+		
+		if(number % counter == 0)
+			return enPrimeNotPrime::notPrime;
+	}
+	
+	return enPrimeNotPrime::prime;
+	
+}
+
+void printNumberType(int number){
+	
+	switch (checkPrime(number)){
+		
+		case enPrimeNotPrime::prime:
+			cout << "the number is prime";
+			break;
+		case enPrimeNotPrime::notPrime:
+			cout << "the number is not prime";
+			break;
+		
+	}
+	
+}
+
+int main(int argc, char** argv){
+	
+	printNumberType(readPositiveNumber("please enter a positive number: "));
+	
+}

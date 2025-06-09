@@ -1,0 +1,24 @@
+int readNumber(){
+	
+	int number;
+	
+	cout << "Please enter a Number: ";
+	cin >> number;
+	
+	return number;
+	
+}
+
+void powerOf2_3_4(int number){
+	
+	cout << "Power of 2 of the number " << number << " = " << number * number << endl;
+	cout << "Power of 3 of the number " << number << " = " << number * number * number << endl;
+	cout << "Power of 4 of the number " << number << " = " << number * number * number * number << endl;
+	
+}
+
+int main(int argc, char** argv){
+	
+	powerOf2_3_4(readNumber());
+			
+}

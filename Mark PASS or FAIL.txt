@@ -1,0 +1,37 @@
+float readMark(){
+	
+	float mark;
+	
+	cout << "please enter your Mark: ";
+	cin >> mark;
+	
+	return mark;
+	
+}
+
+bool markPassFail(float mark){
+
+	return (mark >= 50);	
+	
+}
+
+void printPassFail(float mark){
+	
+	if (markPassFail(mark) == true) {
+		
+		cout << "PASS";
+		
+	}
+	else{
+		
+		cout << "FAIL";
+		
+	}
+	
+}
+
+int main(int argc, char** argv){
+
+	printPassFail(readMark());
+		
+}

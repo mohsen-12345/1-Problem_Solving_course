@@ -1,0 +1,60 @@
+struct stInfo{
+	
+	bool driverLicense;
+	int age;
+	bool intermediary;
+	
+};
+
+stInfo readInfo(){
+
+	stInfo Info;
+	
+	cout << "Do You Have an Intermediary?: ";
+	cin >> Info.intermediary;
+	cout << "Enter You Age: ";
+	cin >> Info.age;
+	cout << "Enter Your Dirver License: ";
+	cin >> Info.driverLicense;
+	
+	return Info; 
+	
+}
+
+bool validConditions(stInfo Info){
+		
+	if(Info.intermediary){
+		
+		return true;
+		
+	}
+	else{
+		
+		return (Info.age > 21 && Info.driverLicense);
+		
+	}
+		
+}
+
+void printInfo(stInfo Info){
+	
+	if(validConditions(Info)){
+		
+		cout << "Hired";
+		
+	}
+	else{
+	
+		cout << "Rejected";
+	
+	}
+	
+	
+}
+
+
+int main(int argc, char** argv){
+	
+	printInfo(readInfo());
+		
+}

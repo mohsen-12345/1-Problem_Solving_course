@@ -1,0 +1,31 @@
+void readNumbers(int &num1, int &num2){
+	
+	cout << "please read number one: ";
+	cin >> num1;
+	cout << "please read number two: ";
+	cin >> num2;
+	
+}
+
+int MaxOf2Numbers(int num1, int num2){
+	
+	if(num1 > num2)
+		return num1;
+
+	else
+		return num2;
+}
+
+void printResult(int max){
+	
+	cout << "the max number = " << max;
+	
+}
+
+int main(int argc, char** argv){
+	
+	int num1, num2;
+	
+	readNumbers(num1, num2);
+	printResult(MaxOf2Numbers(num1, num2));	
+}

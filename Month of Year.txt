@@ -1,0 +1,62 @@
+enum enMonthOfYear {jan = 1, feb = 2, mar = 3, apr = 4, may = 5, jun = 6, jul = 7, aug = 8, sep = 9, oct = 10, nov = 11, dec = 12};
+
+int readNumberInRange(string message, int from, int to){
+	
+	int number = 0;
+	
+	do{
+		
+		cout << message << endl;
+		cin >> number;
+		
+	} while(number < from || number > to);
+	
+	return number;
+	
+}
+
+enMonthOfYear  readMonthOfYear(){
+	
+	return (enMonthOfYear ) readNumberInRange("please enter day number --> (jan = 1, feb = 2, mar = 3, apr = 4, may = 5, jun = 6, jul = 7, aug = 8, sep = 9, oct = 10, nov = 11, dec = 12): ",1 ,12);
+	
+}
+
+string getMonthOfYear(enMonthOfYear month){
+	
+	switch(month){
+		
+		case enMonthOfYear ::jan:
+			return "january";
+		case enMonthOfYear ::feb:
+			return "feburay";
+		case enMonthOfYear ::mar:
+			return "march";
+		case enMonthOfYear ::apr:
+			return "april";
+		case enMonthOfYear ::may:
+			return "may";
+		case enMonthOfYear ::jun:
+			return "june";
+		case enMonthOfYear ::jul:
+			return "july";
+		case enMonthOfYear ::aug:
+			return "august";
+		case enMonthOfYear ::sep:
+			return "septemper";
+		case enMonthOfYear ::oct:
+			return "october";	
+		case enMonthOfYear ::nov:
+			return "november";	
+		case enMonthOfYear ::dec:
+			return "december";								
+		default:
+			return "not a valid month";	
+	}
+	
+}
+
+int main(int argc, char** argv){
+	
+	cout <<  getMonthOfYear(readMonthOfYear());
+	
+}

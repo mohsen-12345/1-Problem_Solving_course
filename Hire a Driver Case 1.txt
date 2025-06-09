@@ -1,0 +1,45 @@
+struct stInfo{
+	
+	bool driverLicense;
+	int age;
+	
+};
+
+stInfo readInfo(){
+
+	stInfo Info;
+	
+	cout << "Enter You Age: ";
+	cin >> Info.age;
+	cout << "Enter Your Dirver License: ";
+	cin >> Info.driverLicense;
+	
+	return Info; 
+	
+}
+
+bool validConditions(stInfo Info){
+	
+	return (Info.age > 21 && Info.driverLicense);
+	
+}
+
+void printInfo(stInfo Info){
+	
+	if(validConditions(Info)){
+		
+		cout << "Hired";
+		
+	}
+	else{
+		cout << "Rejected";
+	}
+	
+}
+
+
+int main(int argc, char** argv){
+	
+	printInfo(readInfo());
+		
+}

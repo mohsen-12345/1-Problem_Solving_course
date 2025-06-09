@@ -1,0 +1,26 @@
+void read(float &A){
+	
+	cout << "please enter D: ";
+	cin >> A;
+	
+}
+
+float circleAreaByInscripedInSquare(float A){
+	
+	return (3.14 * pow(A, 2)) / 4;
+	
+}
+
+void printResult(float area){
+	
+	cout << "Circle Area by Inscriped in Square = " << area;
+	
+}
+
+int main(int argc, char** argv){
+	
+	float A;
+	read(A);
+	printResult(circleAreaByInscripedInSquare(A));
+			
+}

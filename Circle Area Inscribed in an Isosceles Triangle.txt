@@ -1,0 +1,28 @@
+void read(float &A, float &B){
+	
+	cout << "please enter A: ";
+	cin >> A;
+	cout << "please enter B: ";
+	cin >> B;
+	
+}
+
+float circleAreaInscribedInIsoscelesTriangle(float A, float B ){
+	
+	return 3.14 * (pow(B, 2) / 4) * ((2 * A - B) / (2 * A + B));
+	
+}
+
+void printResult(float area){
+	
+	cout << "Circle Area inscribed in Isosceles Triangle = " << area;
+	
+}
+
+int main(int argc, char** argv){
+	
+	float A, B;
+	read(A, B);
+	printResult(circleAreaInscribedInIsoscelesTriangle(A, B));
+			
+}

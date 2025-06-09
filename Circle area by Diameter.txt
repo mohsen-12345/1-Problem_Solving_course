@@ -1,0 +1,26 @@
+void read(float &D){
+	
+	cout << "please enter D: ";
+	cin >> D;
+	
+}
+
+float circleAreaByDiameter(float D){
+	
+	return (3.14 * pow(D, 2)) / 4;
+	
+}
+
+void printResult(float area){
+	
+	cout << "Circle Area by Dimeter = " << area;
+	
+}
+
+int main(int argc, char** argv){
+	
+	float D;
+	read(D);
+	printResult(circleAreaByDiameter(D));
+			
+}

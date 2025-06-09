@@ -1,0 +1,36 @@
+int readNumber(){
+	
+	int number;
+	
+	cout << "Please Enter a number: ";
+	cin >> number;
+	
+	return number;
+	
+}
+
+int factorial(int number){
+	
+	int factorial = 1;
+	
+	for(int i = 1; i <= number; i++){
+		
+		factorial = factorial * i;
+		
+	}
+	
+	return factorial;
+		
+}
+
+void printFactorial(){
+	
+	cout << "the factorial = " << factorial(readNumber());
+	
+}
+
+int main(int argc, char** argv){
+	
+	printFactorial();
+			
+}

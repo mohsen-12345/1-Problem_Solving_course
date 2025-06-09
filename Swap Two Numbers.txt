@@ -1,0 +1,33 @@
+void readNumbers(int &num1, int &num2){
+	
+	cout << "please read number one: ";
+	cin >> num1;
+	cout << "please read number two: ";
+	cin >> num2;
+	
+}
+
+void printNumbers(int num1, int num2){
+	
+	cout << "num1 = " << num1 << " . " << "num2 = " << num2 << endl;
+	
+}
+
+void swapNumbers(int &num1, int &num2){
+	
+	int temp;
+	temp = num1;
+	num1 = num2;
+	num2 = temp;
+
+}
+
+int main(int argc, char** argv){
+	
+	int num1, num2;
+	readNumbers(num1, num2);
+	printNumbers(num1, num2);
+	swapNumbers(num1, num2);
+	printNumbers(num1, num2);
+			
+}

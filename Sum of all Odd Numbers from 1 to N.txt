@@ -1,0 +1,50 @@
+enum enOddOrEven{odd = 1, even = 2};
+
+int readNumber(){
+	
+	int number;
+	
+	cout << "Please Enter a number: ";
+	cin >> number;
+	
+	return number;
+	
+}
+
+enOddOrEven checkOddOrEven(int number){
+	
+	if(number % 2 == 0){
+		
+		return enOddOrEven::even;
+	}
+	else{
+		
+		return enOddOrEven::odd;
+	}
+	
+}
+
+int sumOfOddNumbers(int number){
+	
+	int sum = 0;
+	cout << "the of all numbers:";
+	for(int i = 1; i <= number; i++){
+		
+		
+		if (checkOddOrEven(i) == enOddOrEven::odd){
+			
+			sum += i;
+			
+		}
+		
+	}
+	return sum;
+		
+}
+
+
+int main(int argc, char** argv){
+	
+	cout << sumOfOddNumbers(readNumber());
+			
+}

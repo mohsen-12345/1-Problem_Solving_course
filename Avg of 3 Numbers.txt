@@ -1,0 +1,82 @@
+struct stNumInfo{
+	
+	int number1;
+	int number2;
+	int number3;
+	
+};
+
+stNumInfo readNumInfo(){
+	
+	stNumInfo info;
+	
+	cout << "enter first number: ";
+	cin >> info.number1;
+	cout << "enter second number: ";
+	cin >> info.number2;
+	cout << "enter third number: ";
+	cin >> info.number3;
+	
+	return info;
+	
+}
+
+int avg3Numbers(stNumInfo info){
+	
+	int avg = (info.number1 + info.number2 + info.number3) / 3; 
+	
+	return avg;
+	
+}
+
+void printResult(int avg){
+	
+	cout << "the average of the three numbers = " << avg;
+	
+}
+
+int main(int argc, char** argv){
+
+	printResult(avg3Numbers(readNumInfo()));
+		
+}
+---------------------------------------
+Another Solution:
+void readNumbers(int &num1, int &num2, int &num3){
+	
+	cout << "please read number one: ";
+	cin >> num1;
+	cout << "please read number two: ";
+	cin >> num2;
+	cout << "please read number three: ";
+	cin >> num3;
+	
+}
+
+int sum3Numbers(int num1, int num2, int num3){
+	
+	int total = num1 + num2 + num3;
+	return total;
+	
+}
+
+float average3Numbers(int num1, int num2, int num3){
+	
+	return (float)sum3Numbers(num1, num2, num3) / 3;
+	
+}
+
+void printResult(float average){
+	
+	cout << "the average of the three numbers above = " << average;
+	
+}
+
+int main(int argc, char** argv){
+	
+	int num1, num2, num3;
+	
+	readNumbers(num1, num2, num3);
+	printResult(average3Numbers(num1, num2, num3));
+	
+}

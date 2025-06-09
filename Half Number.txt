@@ -1,0 +1,28 @@
+int readNumber(){
+	
+	int num;
+	
+	cout << "enter a number to see the half of it: ";
+	cin >> num;
+	
+	return num;
+	
+}
+
+float halfNumber(int num){
+	
+	return (float)num / 2;
+	
+}
+
+void printHalfNumber(float num){
+	
+	cout << "half number = " << num;
+	
+}
+
+int main(int argc, char** argv){
+
+	printHalfNumber(halfNumber(readNumber()));
+		
+}

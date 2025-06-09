@@ -1,0 +1,28 @@
+void read(float &A, float &D){
+	
+	cout << "please enter A: ";
+	cin >> A;
+	cout << "please enter D: ";
+	cin >> D;
+	
+}
+
+float RectangleAreaBySideAndDiagonal(float A, float D){
+	
+	return A * sqrt(pow(D, 2) - pow(A, 2));
+	
+}
+
+void printResult(float area){
+	
+	cout << "Rectangle Area by Side and Diagonal = " << area;
+	
+}
+
+int main(int argc, char** argv){
+	
+	float A, B;
+	read(A, B);
+	printResult(RectangleAreaBySideAndDiagonal(A, B));
+			
+}

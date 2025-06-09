@@ -1,0 +1,77 @@
+struct stNumInfo{
+	
+	int number1;
+	int number2;
+	int number3;
+	
+};
+
+stNumInfo readNumInfo(){
+	
+	stNumInfo info;
+	
+	cout << "enter first number: ";
+	cin >> info.number1;
+	cout << "enter second number: ";
+	cin >> info.number2;
+	cout << "enter third number: ";
+	cin >> info.number3;
+	
+	return info;
+	
+}
+
+int sum3Numbers(stNumInfo info){
+	
+	int sum = info.number1 + info.number2 + info.number3;
+	
+	return sum;
+	
+}
+
+void printSum(int sum){
+	
+	cout << "the sum of the three numbers = " << sum;
+	
+}
+
+int main(int argc, char** argv){
+
+	printSum(sum3Numbers(readNumInfo()));
+		
+}
+
+---------------------------------------
+Another Solution:
+void readNumbers(int &num1, int &num2, int &num3){
+	
+	cout << "please read number one: ";
+	cin >> num1;
+	cout << "please read number two: ";
+	cin >> num2;
+	cout << "please read number three: ";
+	cin >> num3;
+	
+}
+
+int sum3Numbers(int num1, int num2, int num3){
+	
+	int total = num1 + num2 + num3;
+	return total;
+	
+}
+
+void printResult(int total){
+	
+	cout << "the sum of the three numbers above = " << total;
+	
+}
+
+int main(int argc, char** argv){
+	
+	int num1, num2, num3;
+	
+	readNumbers(num1, num2, num3);
+	printResult(sum3Numbers(num1, num2, num3));
+	
+}
